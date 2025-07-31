@@ -21,8 +21,8 @@ class AllSetting {
         this.tgRunTime = "@daily";
         this.tgBotBackup = false;
         this.tgBotLoginNotify = true;
-        this.tgCpu = 80;
-        this.tgLang = "en-US";
+        this.tgCpu = 99;
+        this.tgLang = "zh-CN";
         this.twoFactorEnable = false;
         this.twoFactorToken = "";
         this.xrayTemplateConfig = "";
