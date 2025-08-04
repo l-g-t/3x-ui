@@ -598,7 +598,7 @@
 "idDesc" = "Show your Telegram ID"
 
 [tgbot.messages]
-"cpuThreshold" = "🔴 CPU Load {{ .Percent }}% exceeds the threshold of {{ .Threshold }}%"
+"cpuThreshold" = "🔴 Host: {{ .Hostname }} CPU Load {{ .Percent }}% exceeds the threshold of {{ .Threshold }}%"
 "selectUserFailed" = "❌ Error in user selection!"
 "userSaved" = "✅ Telegram User saved."
 "loginSuccess" = "✅ Logged in to the panel successfully.\r\n"
