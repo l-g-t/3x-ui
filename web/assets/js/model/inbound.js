@@ -559,7 +559,7 @@ class TlsStreamSettings extends XrayCommonClass {
         disableSystemRoot = false,
         enableSessionResumption = false,
         certificates = [new TlsStreamSettings.Cert()],
-        alpn = [ALPN_OPTION.H3, ALPN_OPTION.H2, ALPN_OPTION.HTTP1],
+        alpn = [ALPN_OPTION.H2, ALPN_OPTION.HTTP1],
         settings = new TlsStreamSettings.Settings()
     ) {
         super();
@@ -725,8 +725,8 @@ class RealityStreamSettings extends XrayCommonClass {
     constructor(
         show = false,
         xver = 0,
-        dest = 'yahoo.com:443',
-        serverNames = 'yahoo.com,www.yahoo.com',
+        dest = 'google.com:443',
+        serverNames = 'google.com,www.google.com',
         privateKey = '',
         minClientVer = '',
         maxClientVer = '',
@@ -1394,6 +1394,9 @@ class Inbound extends XrayCommonClass {
             if (!ObjectUtil.isEmpty(this.stream.reality.settings.spiderX)) {
                 params.set("spx", this.stream.reality.settings.spiderX);
             }
+            if (!ObjectUtil.isEmpty(this.stream.reality.settings.mldsa65Verify)) {
+                params.set("pqv", this.stream.reality.settings.mldsa65Verify);
+            }
             if (type == 'tcp' && !ObjectUtil.isEmpty(flow)) {
                 params.set("flow", flow);
             }
@@ -1567,6 +1570,9 @@ class Inbound extends XrayCommonClass {
             }
             if (!ObjectUtil.isEmpty(this.stream.reality.settings.spiderX)) {
                 params.set("spx", this.stream.reality.settings.spiderX);
+            }
+            if (!ObjectUtil.isEmpty(this.stream.reality.settings.mldsa65Verify)) {
+                params.set("pqv", this.stream.reality.settings.mldsa65Verify);
             }
         }
 
