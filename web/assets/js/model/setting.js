@@ -21,7 +21,7 @@ class AllSetting {
         this.tgRunTime = "@daily";
         this.tgBotBackup = false;
         this.tgBotLoginNotify = true;
-        this.tgCpu = 199;
+        this.tgCpu = 100;
         this.tgLang = "zh-CN";
         this.twoFactorEnable = false;
         this.twoFactorToken = "";
